@@ -1,0 +1,6 @@
+{
+  "name": "JoyServing",
+  "description": "JoyServing 是一个顶尖的人机协同智能客服服务平台。它将强大的生成式 AI 数字员工（Agent）与真人坐席无缝集成，涵盖数字员工市场、培训中心（知识库与技能系统）、A/B测试、客服实时接待工作台（包含AI思考/工具执行链路可视）以及全渠道精细化数据流转分析仪表盘。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

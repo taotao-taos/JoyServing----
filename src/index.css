@@ -1,0 +1,280 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "sonner/dist/styles.css";
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Inter Variable', sans-serif;
+
+    /* ── JoyServing 统一品牌色板（暖灰 + 墨黑）──────────────── */
+    --color-paper: var(--paper);            /* 页面画布底色 */
+    --color-surface: var(--surface);        /* 卡片 / 弹窗 / 面板 */
+    --color-rail: var(--rail);              /* 侧栏 / 表头 / 轻填充 */
+    --color-rail-strong: var(--rail-strong);/* 略深的轨道色（页脚等） */
+    --color-line: var(--line);              /* 发丝级描边 */
+    --color-ink: var(--ink);                /* 主操作 / 标题 / 深色面 */
+    --color-ink-hover: var(--ink-hover);    /* 墨黑 hover 态 */
+    --color-live: var(--live);              /* 在线 / 实时指示蓝 */
+
+    /* ── 清言参考：卡片 / 导航 净白系（用于卡片描边、侧栏激活态）──── */
+    --color-card-line: var(--card-line);        /* 卡片 0.5px 发丝级冷灰描边 */
+    --color-nav-active: var(--nav-active);      /* 侧栏激活项柔灰蓝填充 */
+    --color-nav-active-line: var(--nav-active-line); /* 侧栏激活项描边 */
+
+    /* 补齐项目里用到、但 Tailwind 默认缺失的中间灰阶，使既有意图真正生效 */
+    --color-neutral-150: oklch(0.946 0 0);
+    --color-neutral-250: oklch(0.896 0 0);
+    --color-neutral-350: oklch(0.789 0 0);
+    --color-neutral-550: oklch(0.498 0 0);
+    --color-neutral-850: oklch(0.237 0 0);
+
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    /* 首页标准描边 #E5E5E5 */
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #a3a3a3;
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    /* 控件基准 ≈7px；卡片用 rounded-[13px] 显式指定 */
+    --radius: 0.4375rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+
+    /* JoyServing 别名 → shadcn Mira 预设（b1D0eCCA）语义 token */
+    --paper: var(--background);
+    --surface: var(--card);
+    --rail: var(--muted);
+    --rail-strong: var(--accent);
+    --line: var(--border);
+    --ink: var(--primary);
+    --ink-hover: color-mix(in oklch, var(--primary), white 12%);
+    --live: oklch(0.623 0.214 259.815);
+    --card-line: var(--border);
+    --nav-active: var(--sidebar-accent);
+    --nav-active-line: var(--sidebar-border);
+}
+
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+
+    --paper: var(--background);
+    --surface: var(--card);
+    --rail: var(--muted);
+    --rail-strong: var(--accent);
+    --line: var(--border);
+    --ink: var(--primary);
+    --ink-hover: color-mix(in oklch, var(--primary), white 12%);
+    --live: oklch(0.623 0.214 259.815);
+    --card-line: var(--border);
+    --nav-active: var(--sidebar-accent);
+    --nav-active-line: var(--sidebar-border);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+
+/* ── 统一滚动条：纤细、低饱和、悬停加深 ─────────────────────── */
+@layer utilities {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-neutral-300) transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--color-neutral-300);
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-neutral-400);
+  }
+}
+
+/* ── Sonner Toast：相对视口顶栏居中、无关闭钮 ─────────────── */
+@layer components {
+  [data-sonner-toaster][data-x-position='center'] {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    pointer-events: none;
+  }
+
+  /* 每条 toast 相对视口中轴居中（不同宽度也保持同轴） */
+  [data-sonner-toaster][data-x-position='center'] [data-sonner-toast] {
+    left: 50% !important;
+    right: auto !important;
+    translate: -50% 0;
+    margin-inline: 0 !important;
+    pointer-events: auto;
+  }
+
+  .cn-toast {
+    min-height: 32px !important;
+    padding: 6px 14px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    width: max-content !important;
+    max-width: min(92vw, 560px) !important;
+  }
+
+  .cn-toast [data-content] {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .cn-toast-title,
+  .cn-toast [data-title] {
+    text-align: center;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    font-weight: 500 !important;
+  }
+
+  .cn-toast [data-close-button] {
+    display: none !important;
+  }
+
+  @media (max-width: 600px) {
+    [data-sonner-toaster][data-x-position='center'] {
+      left: 50% !important;
+      right: auto !important;
+      transform: translateX(-50%) !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+    }
+
+    [data-sonner-toaster][data-x-position='center'] [data-sonner-toast] {
+      max-width: calc(100vw - 24px);
+    }
+  }
+
+  /* 账号首字头像：青 / 天蓝 / 淡紫 soft mesh 渐变 */
+  .avatar-soft-gradient {
+    background:
+      radial-gradient(120% 90% at 18% 12%, oklch(0.92 0.08 210) 0%, transparent 55%),
+      radial-gradient(100% 80% at 88% 28%, oklch(0.78 0.13 230) 0%, transparent 52%),
+      radial-gradient(110% 90% at 20% 95%, oklch(0.84 0.09 295) 0%, transparent 55%),
+      linear-gradient(145deg, oklch(0.76 0.13 225), oklch(0.72 0.12 290));
+    color: #fff !important;
+  }
+}

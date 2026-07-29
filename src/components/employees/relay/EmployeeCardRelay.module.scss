@@ -1,0 +1,221 @@
+.card {
+  width: 100%;
+  min-height: 224px;
+  aspect-ratio: 1;
+  box-shadow: 0px 2px 9.99px 0px rgba(31, 35, 41, 0.02);
+  border: 1px solid #E5E5E5;
+  border-radius: 12.94px;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(31, 35, 41, 0.08);
+}
+
+.cardInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.avatarWrap {
+  position: relative;
+  width: 65.91px;
+  height: 65.91px;
+  margin-bottom: 9.99px;
+}
+
+.avatarBorder {
+  border: 1.5px solid rgba(198, 210, 255, 0.6);
+  border-radius: 19.41px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: #f8fafc;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.statusDot {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 11.98px;
+  height: 11.98px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.name {
+  color: rgb(23, 23, 23);
+  font-size: 13.98px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.descWrap {
+  height: 35.7px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.desc {
+  color: rgb(115, 115, 115);
+  font-size: 10.98px;
+  line-height: 17.85px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  max-height: calc(17.85px * 2);
+}
+
+.actionWrap {
+  width: 100%;
+  border-top: 1px solid rgba(237, 237, 237, 0.6);
+  padding-top: 10.98px;
+}
+
+.actionInner {
+  display: flex;
+  gap: 5.99px;
+  justify-content: center;
+}
+
+.btnTrain {
+  position: relative;
+  width: 74.9px;
+  height: 31.96px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid #E5E5E5;
+  border-radius: 7.19px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btnTrain:hover {
+  background-color: #f9f9f9;
+}
+
+.btnTrainText {
+  color: rgb(38, 38, 38);
+  font-size: 10.98px;
+}
+
+.trainNoticeDot {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #fbbf24;
+  border: 1.5px solid #fff;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.btnRest {
+  width: 74.9px;
+  height: 31.96px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid #91C5FF;
+  border-radius: 7.19px;
+  background-color: rgb(240, 247, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btnRest:hover {
+  background-color: #e6f1fc;
+}
+
+.btnRestText {
+  color: rgb(0, 80, 210);
+  font-size: 10.98px;
+}
+
+.btnWork {
+  width: 74.9px;
+  height: 31.96px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid #A4F4CF;
+  border-radius: 7.19px;
+  background-color: rgba(236, 253, 245, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btnWork:hover {
+  background-color: rgba(236, 253, 245, 0.8);
+}
+
+.btnWorkText {
+  color: rgb(0, 153, 102);
+  font-size: 10.98px;
+}
+
+.btnMore {
+  width: 31.96px;
+  height: 31.96px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid #D4D4D4;
+  border-radius: 7.19px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btnMore:hover {
+  background-color: #f9f9f9;
+}
+
+.btnMoreText {
+  color: rgb(115, 115, 115);
+  font-size: 11.98px;
+}
+
+.moreWrap {
+  position: relative;
+}

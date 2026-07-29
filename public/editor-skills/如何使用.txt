@@ -1,0 +1,8 @@
+1. 编辑 manifest.json，在 "skills" 数组中加入对象：
+   id（必填，唯一）、title（必填）、description（选填，简短）、doc（选填，本目录下文件名如 my-skill.md）
+
+2. 若 doc 指向 .md 或 .txt，启动项目后前端会抓取该文件正文并拼进 description（上限约 12000 字），随聊天 API 发给模型。
+
+3. 若 manifest 里某技能的 id 与 src/config/editorSkills.ts 内置 id 相同，将覆盖内置的标题与描述。
+
+4. 可参考 example-skill.md 的写法；不需要示例时可将 example-skill.md 删除。

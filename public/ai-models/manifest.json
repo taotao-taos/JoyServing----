@@ -1,0 +1,168 @@
+{
+  "chatModel": "qwen3-vl-flash-2026-01-22",
+  "routerModel": "qwen3-vl-flash-2026-01-22",
+  "_comment": "apiModelId 须与模型广场「复制」一致。默认 Stable-Diffusion-3-5-Large；若无权限可改其它条目或在 .env 设 AIHUBMIX_IMAGE_MODEL。",
+  "imageModels": [
+    {
+      "id": "stable-diffusion-3-5-large-default",
+      "apiModelId": "Stable-Diffusion-3-5-Large",
+      "title": "SD 3.5 Large",
+      "desc": "Stability AI 文生图；apiModelId 以模型广场为准。",
+      "isDefault": false,
+      "icon": "spin",
+      "etaHint": "—"
+    },
+    {
+      "id": "v2-default",
+      "apiModelId": "V_2",
+      "title": "V_2",
+      "desc": "文生图；以模型广场 model_id 为准。",
+      "icon": "spin",
+      "etaHint": "—"
+    },
+    {
+      "id": "flux-1-1-pro-default",
+      "apiModelId": "FLUX-1.1-pro",
+      "title": "FLUX 1.1 Pro",
+      "desc": "Black Forest Labs 高速高质文生图；apiModelId 以模型广场为准。",
+      "icon": "spin",
+      "etaHint": "10s"
+    },
+    {
+      "id": "v2a-turbo-default",
+      "apiModelId": "V_2A_TURBO",
+      "title": "V_2A_TURBO",
+      "desc": "高速文生图与风格化表达。",
+      "icon": "spin",
+      "etaHint": "—"
+    },
+    {
+      "id": "dalle2-alt",
+      "apiModelId": "jimeng_seedream46_cvtob",
+      "title": "即梦 4.6（默认）",
+      "desc": "火山引擎即梦图片生成 4.6（req_key）。",
+      "isDefault": true,
+      "icon": "grid",
+      "etaHint": "—"
+    },
+    {
+      "id": "midjourney-v7",
+      "apiModelId": "midjourney-v7",
+      "title": "Midjourney V7",
+      "desc": "极致美学，创意能力强。若无该 ID 请在模型广场复制后改写 apiModelId。",
+      "icon": "grid",
+      "etaHint": "20s"
+    },
+    {
+      "id": "img-15",
+      "apiModelId": "imagen-3.0-generate-002",
+      "title": "IMG 1.5",
+      "desc": "精准语义理解，擅长复杂场景图像生成。api 无效时可改为账户内 Imagen / 同类 ID。",
+      "icon": "layers",
+      "etaHint": "120s"
+    },
+    {
+      "id": "flux-2-max",
+      "apiModelId": "flux-2-max",
+      "title": "F.2 Max",
+      "desc": "原生 4MP 超清，色彩控制更精准。无则改用 flux-pro / 账户可用高清模型 ID。",
+      "icon": "spin",
+      "etaHint": "10s"
+    },
+    {
+      "id": "seedream-4-5",
+      "apiModelId": "doubao-seedream-4-5-251015",
+      "title": "Seedream 4.5",
+      "desc": "多角色一致性强，支持多图融合。",
+      "icon": "grid",
+      "etaHint": "10s"
+    },
+    {
+      "id": "seedream-5-lite",
+      "apiModelId": "doubao-seedream-5-lite-251015",
+      "title": "Seedream 5.0 Lite",
+      "desc": "更强语义理解，多角色一致性，审美强。",
+      "icon": "layers",
+      "etaHint": "120s"
+    },
+    {
+      "id": "seedream-4",
+      "apiModelId": "doubao-seedream-4-0-250828",
+      "title": "Seedream 4",
+      "desc": "极速出图，中文书写还原高。",
+      "icon": "spin",
+      "etaHint": "10s"
+    }
+  ],
+  "videoModels": [
+    {
+      "id": "wanxiang-2-6",
+      "apiModelId": "wan2.6-t2v",
+      "title": "万相 2.6（默认）",
+      "desc": "与官方 Video-Gen 一致，服务端默认 AIHUBMIX_VIDEO_MODEL。",
+      "isDefault": true,
+      "icon": "layers",
+      "etaHint": "600s"
+    },
+    {
+      "id": "seedance-1-0-pro-default",
+      "apiModelId": "doubao-seedance-1-0-pro-250528",
+      "title": "Seedance 1.0 Pro",
+      "desc": "豆包视频；若报参数错可设 AIHUBMIX_VIDEO_FALLBACK_MODEL 或改用万相默认。",
+      "isDefault": false,
+      "icon": "spin",
+      "etaHint": "300s"
+    },
+    {
+      "id": "kling-o1",
+      "apiModelId": "kling-o1",
+      "title": "可灵 O1",
+      "desc": "支持自然语言编辑，视频图片多模态参考。",
+      "icon": "grid",
+      "etaHint": "300s",
+      "memberOnly": true
+    },
+    {
+      "id": "hailuo-2-3",
+      "apiModelId": "hailuo-2.3",
+      "title": "海螺 2.3",
+      "desc": "更好的指令遵循，动作、表情效果升级。",
+      "icon": "spin",
+      "etaHint": "180s"
+    },
+    {
+      "id": "vidu-q2",
+      "apiModelId": "vidu-q2",
+      "title": "Vidu Q2",
+      "desc": "参考生视频，角色一致性强。",
+      "icon": "layers",
+      "etaHint": "300s"
+    },
+    {
+      "id": "kling-3-0",
+      "apiModelId": "kling-v3",
+      "title": "可灵 3.0",
+      "desc": "可灵最新 3.0 高清视频模型。",
+      "icon": "grid",
+      "etaHint": "300s",
+      "memberOnly": true
+    },
+    {
+      "id": "kling-3-omni",
+      "apiModelId": "kling-v3-omni",
+      "title": "可灵 3.0 Omni",
+      "desc": "支持多模态输入的全能版。",
+      "icon": "grid",
+      "etaHint": "300s",
+      "memberOnly": true
+    },
+    {
+      "id": "kling-2-6",
+      "apiModelId": "kling-v2.6",
+      "title": "可灵 2.6",
+      "desc": "可灵最新视频模型，音画直出。",
+      "icon": "grid",
+      "etaHint": "300s"
+    }
+  ]
+}

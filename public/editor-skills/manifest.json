@@ -1,0 +1,127 @@
+{
+  "skills": [
+    {
+      "id": "category-design",
+      "title": "海报宣传",
+      "description": "主视觉与活动海报：渠道、风格、主色与层次。点击分类 chip 默认挂载本文档；再选下级推荐卡片则附加该卡片的提示词与参考图。",
+      "doc": "categories/design.md",
+      "workflow": {
+        "preferPipeline": "image",
+        "systemExtra": "交付物以可投放主视觉为主；若用户未说明画幅，主动确认比例、主标题安全区与前景留白。",
+        "imagePromptPrefix": "层次清晰：主体突出、背景不抢眼；默认预留主标题与一级信息编排空间。"
+      }
+    },
+    {
+      "id": "category-social",
+      "title": "社交封面",
+      "description": "各平台封面与头图：安全区、标题可读性、竖版/方版。可与推荐预设组合使用。",
+      "doc": "categories/social.md",
+      "workflow": {
+        "preferPipeline": "image",
+        "systemExtra": "优先确认平台（如 B 站/小红书/公众号）与竖横版安全区；文案可读性优于装饰。",
+        "imagePromptPrefix": "封面信息层级：标题区对比度高、关键元素避开边缘裁切；单图叙事明确。"
+      }
+    },
+    {
+      "id": "category-branding",
+      "title": "品牌设计",
+      "description": "品牌气质、色彩与字体方向及应用场景。可与推荐预设组合使用。",
+      "doc": "categories/branding.md",
+      "workflow": {
+        "preferPipeline": "image",
+        "systemExtra": "先收敛品牌气质与色彩/字体禁忌，再进入主视觉；避免与已知竞品视觉撞车。"
+      }
+    },
+    {
+      "id": "category-illustration",
+      "title": "风格插画",
+      "description": "画风、主色、构图与元素清单。可与推荐预设组合使用。",
+      "doc": "categories/illustration.md",
+      "workflow": {
+        "preferPipeline": "image",
+        "systemExtra": "明确画风参考（扁平/噪点/水彩等）与主色数量；复杂场景拆成可执行的单幅描述。",
+        "imagePromptPrefix": "风格统一、轮廓干净；如无说明则避免过度细节抖动与杂乱纹理。"
+      }
+    },
+    {
+      "id": "category-ecommerce",
+      "title": "电商营销",
+      "description": "主图与促销氛围：卖点、平台规范、文案位。可与推荐预设组合使用。",
+      "doc": "categories/ecommerce.md",
+      "workflow": {
+        "preferPipeline": "image",
+        "systemExtra": "主图需卖点层级与平台规范（边距、牛皮癣禁忌）；促销信息避免违规极限词。",
+        "imagePromptPrefix": "商品主体清晰、光线干净；背景不喧宾夺主，保留价格条/角标占位。"
+      }
+    },
+    {
+      "id": "category-video",
+      "title": "视频分镜",
+      "description": "分镜与关键帧：画幅、镜头语言、节奏。可与推荐预设组合使用。",
+      "doc": "categories/video.md",
+      "workflow": {
+        "preferPipeline": "video",
+        "treatAsStoryboard": true,
+        "systemExtra": "先输出可拍可剪的镜头表（景别、时长感、转场意图），再引导是否生成关键帧或视频。",
+        "videoPromptPrefix": "镜头运动与节奏明确；如无说明默认电影感叙事、避免跳轴。"
+      }
+    },
+    {
+      "id": "seedance-creation",
+      "title": "Seedance 2.0 视频创作",
+      "description": "从构思到可发布视频，人物形象一致，故事板清晰；侧重视频节奏、镜头语言与可落地的分镜描述。",
+      "doc": "example-skill.md",
+      "workflow": {
+        "preferPipeline": "video",
+        "treatAsStoryboard": true,
+        "systemExtra": "保持人物/服装/场景一致性描述；分段给出镜头意图再聚合为可生成提示。",
+        "videoPromptPrefix": "人物形象与场景连贯；单机位变化与运动路径写清楚。"
+      }
+    },
+    {
+      "id": "dressing-change",
+      "title": "丝滑装扮的变换",
+      "description": "使用 Seedance 2.0 生成流畅换装短视频；关注服装过渡自然、光影一致与动作连贯。",
+      "workflow": {
+        "preferPipeline": "video",
+        "systemExtra": "强调换装前后光影一致、动作幅度可控；避免手部与布料穿模感描述。",
+        "videoPromptPrefix": "服装过渡自然、同一人物轮廓稳定；镜头以中近景展示材质与动态。"
+      }
+    },
+    {
+      "id": "drone-video",
+      "title": "无人机式视频",
+      "description": "生成无人机风格运镜：大场景俯瞰、推进与环绕；描述镜头路径与节奏感。",
+      "workflow": {
+        "preferPipeline": "video",
+        "systemExtra": "默认大场景俯瞰或环绕；标明高度感、速度与地标关系。",
+        "videoPromptPrefix": "无人机运镜：起始高度、推进或环绕方向、主体在画面中的位置变化。"
+      }
+    },
+    {
+      "id": "amazon-listing",
+      "title": "亚马逊产品列表",
+      "description": "亚马逊商品主图与 A+ 内容方向：卖点提炼、合规表述、多图叙事与转化导向文案。",
+      "workflow": {
+        "preferPipeline": "image",
+        "systemExtra": "合规表述与卖点分层（主图白底/场景图区分）；避免未授权声明与违规承诺。",
+        "imagePromptPrefix": "电商主图质感：主体清晰、材质可信；背景简洁符合主图规范。"
+      }
+    },
+    {
+      "id": "storyboard-pack",
+      "title": "分镜故事板套件",
+      "description": "子目录中的 SKILL.md 与 references：运镜与版式模板。",
+      "doc": "分镜故事板/SKILL.md",
+      "workflow": {
+        "preferPipeline": "video",
+        "treatAsStoryboard": true,
+        "forceOrchestration": true,
+        "skipDirectImageWhenRouted": true,
+        "systemExtra": "严格按镜头编号与景别推进；版式参考子文档中的网格与标注习惯。",
+        "imagePromptPrefix": "单格静帧：景别与轴线一致，与其他格光影连续。",
+        "videoPromptPrefix": "按格切换时保持空间连续与视线方向一致。"
+      }
+    }
+  ]
+}
